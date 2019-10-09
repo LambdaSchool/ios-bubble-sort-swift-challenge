@@ -1,6 +1,35 @@
 import UIKit
 
-func bubbleSort(){
+func bubbleSort( array: [Int]) {
+    
+    // Creating a new array because the default one seems to be a let constant
+    var newArray = array
+    
+    // Setting up the indexes that'll "crawl" or "bubble" along the array
+    var firstElementIndex = 0
+    var secondElementIndex = 1
+    
+    // Getting the initial value of the arrays
+    var firstElement : Int = array[firstElementIndex]
+    var secondElement: Int = array[secondElementIndex]
+    
+    // Getting the length of the array so we know when to "reset" the sort
+    var arrayLength = array.count
+    
+    if secondElement > firstElement {
+        print("Swap")
+        array[firstElementIndex] = secondElementIndex
+        array[secondElementIndex] = firstElementIndex
+    }
+    
+    if secondElementIndex == arrayLength{
+        firstElement = 0
+        secondElement = 0
+    } else {
+        firstElementIndex += 1
+        secondElementIndex += 1
+    }
+  
     
 }
 
