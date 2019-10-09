@@ -1,8 +1,25 @@
 import UIKit
 
-func bubbleSort(){
-    
+func bubbleSort(_ anArray: [Int]) -> [Int]{
+
+	var totalItems = anArray.count
+
+	for indexPlace in 0...totalItems {
+		for indexPlace2 in 1...totalItems {
+			if anArray[indexPlace2] > anArray[indexPlace2+1] {
+				let higherValue = anArray[indexPlace2]
+				anArray[indexPlace2] = anArray[indexPlace2+1]
+				anArray[index] = higherValue
+
+			}
+		}
+
+		print(totalItems)
+	}
+	return anArray
 }
+
+bubbleSort([1, 2, 3])
 
 
 // Test Cases
