@@ -3,7 +3,7 @@ import Foundation
 func bubbleSort(){
 
 }
-print("test")
+print("time to work on yesterday's afternoon project!")
 
 // Test Cases
 //var arr1 = [1, 3, 6, 2, 4, 5]
