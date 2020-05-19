@@ -1,8 +1,25 @@
 import UIKit
 
-func bubbleSort(){
-    
+
+func bubbleSort<Element: Comparable>(array: [Element]) -> [Element] {
+    var newArray = array
+    for i in 0..<newArray.count {
+        for j in 1..<newArray.count - i {
+            if newArray[j] < newArray[j-1] {
+                let number = newArray[j-1]
+                newArray[j-1] = newArray[j]
+                newArray[j] = number
+            }
+        }
+    }
+    return newArray
 }
+
+var array1 = [1, 3, 6, 2, 4, 5]
+bubbleSort(array: array1)
+
+var array2 = ["b", "a", "c", "f", "e", "d", "i", "g", "h"]
+bubbleSort(array: array2)
 
 
 // Test Cases
