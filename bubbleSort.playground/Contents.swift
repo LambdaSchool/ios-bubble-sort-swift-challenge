@@ -1,6 +1,6 @@
 import UIKit
 
-func bubbleSort(_ arr: [Int], foward: Bool) -> [Int]{
+func bubbleSort<T : Comparable>(_ arr: Array<T>, foward: Bool) -> Array<T>{
 
     var array = arr
     for _ in 0..<array.count - 1{
@@ -29,9 +29,9 @@ bubbleSort(arr3, foward: true) // returns [1, 2, 3, 4, 5, 6]
 
 
 // Test Cases (Stretch Goal)
-//var arr4 = [1, 3, 6, 2, 4, 5]
-//var arr5 = ["b", "a", "c", "f", "e", "d", "i", "g", "h"]
-//var arr6 = [6, 5, 4, 3, 2, 1]
-//bubbleSort(&arr4) // returns [1, 2, 3, 4, 5, 6]
-//bubbleSort(&arr5, by: >) // returns ["i", "h", "g", "f", "e", "d", "c", "b", "a"]
-//bubbleSort(&arr6) // returns [1, 2, 3, 4, 5, 6]
+var arr4 = [1, 3, 6, 2, 4, 5]
+var arr5 = ["b", "a", "c", "f", "e", "d", "i", "g", "h"]
+var arr6 = [6, 5, 4, 3, 2, 1]
+bubbleSort(arr4, foward: true) // returns [1, 2, 3, 4, 5, 6]
+bubbleSort(arr5, foward: false) // returns ["i", "h", "g", "f", "e", "d", "c", "b", "a"]
+bubbleSort(arr6, foward: true) // returns [1, 2, 3, 4, 5, 6]
