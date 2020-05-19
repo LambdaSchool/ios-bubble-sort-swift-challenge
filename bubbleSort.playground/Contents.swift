@@ -1,7 +1,7 @@
 import UIKit
 
-func bubbleSort(_ arr: [Int]) -> [Int]{
-    
+func bubbleSort(_ arr: [Int], foward: Bool) -> [Int]{
+
     var array = arr
     for _ in 0..<array.count - 1{
         for i in 0..<array.count - 1 {
@@ -12,16 +12,20 @@ func bubbleSort(_ arr: [Int]) -> [Int]{
             }
         }
     }
-    return array
+    if foward == true{
+        return array
+    } else {
+        return array.reversed()
+    }
 }
 
 
 // Test Cases
 var arr1 = [1, 3, 6, 2, 4, 5]
 var arr3 = [6, 5, 4, 3, 2, 1]
-bubbleSort(arr1) // returns [1, 2, 3, 4, 5, 6]
-//bubbleSort(&arr1, by: >) // returns [6, 5, 4, 3, 2, 1]
-bubbleSort(arr3) // returns [1, 2, 3, 4, 5, 6]
+bubbleSort(arr1, foward: true)// returns [1, 2, 3, 4, 5, 6]
+bubbleSort(arr1, foward: false) // returns [6, 5, 4, 3, 2, 1]
+bubbleSort(arr3, foward: true) // returns [1, 2, 3, 4, 5, 6]
 
 
 // Test Cases (Stretch Goal)
