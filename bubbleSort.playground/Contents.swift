@@ -1,8 +1,29 @@
 import UIKit
 
-func bubbleSort(){
-    
+
+let somethingArray = [10, 22, 1, 45, 24, 100]
+
+func bubbleSort(bunchOfItems: [Int]) -> [Int]{
+
+
+	var items = bunchOfItems
+
+	for _ in 0..<somethingArray.count {
+		for j in 1..<somethingArray.count {
+			if items[j] < items[j - 1] {
+				let higherValue = items[j - 1]
+				items[j - 1] = items[j]
+				items[j] = higherValue
+
+			}
+		}
+
+		print(items.count)
+	}
+	return items
 }
+
+bubbleSort(bunchOfItems: somethingArray)
 
 
 // Test Cases
